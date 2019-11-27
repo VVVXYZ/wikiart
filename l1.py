@@ -11,7 +11,7 @@ warnings.filterwarnings('ignore')
 #van gogh cezanne ukiyo-e
 imgurl=[]
 filenames=[]
-dirstr="./vangogh1/"
+dirstr="./vangoghL/"
 def save_img():  ##保存图片
     l=len(imgurl)
     requests.adapters.DEFAULT_RETRIES = 5
@@ -49,7 +49,7 @@ def save_img():  ##保存图片
                 tmpIm = BytesIO(img.content)
                 im = Image.open(tmpIm)
                 w,h=im.size
-                if not (w > 230 and h > 230):#尺寸不对
+                if not (w > 20 and h > 20):#尺寸不对
                     continue
                 #print('开始保存图片')
                 #print("filename ", filename, len(img.content))
