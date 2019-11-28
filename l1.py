@@ -11,7 +11,7 @@ warnings.filterwarnings('ignore')
 #van gogh cezanne ukiyo-e
 imgurl=[]
 filenames=[]
-dirstr="./vangoghL/"
+dirstr="./monetL/"
 def save_img():  ##保存图片
     l=len(imgurl)
     requests.adapters.DEFAULT_RETRIES = 5
@@ -69,8 +69,8 @@ def save_img():  ##保存图片
 
 
 def geturl():
-    url = 'https://www.wikiart.org/en/vincent-van-gogh/all-works/text-list'
-    #url = 'https://www.wikiart.org/en/claude-monet/all-works/text-list'
+    # url = 'https://www.wikiart.org/en/vincent-van-gogh/all-works/text-list'
+    url = 'https://www.wikiart.org/en/claude-monet/all-works/text-list'
     strhtml = requests.get(url)        #Get方式获取网页数据
     #print(strhtml.text)
     soup=BeautifulSoup(strhtml.text,'lxml')
